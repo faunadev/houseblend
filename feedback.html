@@ -1,0 +1,99 @@
+<?php
+ob_start(); // Start output buffering
+
+// Define variables for dynamic content
+$title = "Homepage - Houseblend N's Tea & Coffee Shop";
+$logoSrc = "logo.png";
+$menuItems = [
+    "HOME" => "homepage.php",
+    "MENU" => "menupage.php",
+    "ABOUT US" => "about.php",
+    "CONTACTS" => "contacts.php",
+];
+$searchPlaceholder = "Search...";
+$searchLogoSrc = "slogo.png";
+$profileLogoSrc = "profile.png";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <!-- Link to Google Fonts for Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif; /* Apply Poppins to the whole page */
+        }
+
+        /* Set the background image */
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* Style for the "THANK YOU!" text */
+        .thank-you {
+            font-size: 50px;
+            color: #cb6701;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the smaller text below */
+        .message {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the "Back to Home" button */
+        .back-button {
+            background-color: #cb6701;
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px; /* Curvy button */
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #a55200; /* Darker orange on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- "THANK YOU!" Text -->
+        <div class="thank-you">
+            THANK YOU!
+        </div>
+        <!-- Subtext -->
+        <div class="message">
+            Your Inquiry has been Submitted. Please expect an email from us once we reviewed your message.
+        </div>
+        <!-- Back to Home Button -->
+        <a href="homepage.php" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
